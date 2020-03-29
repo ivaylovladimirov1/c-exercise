@@ -1,0 +1,8 @@
+string name = firstName + "" + lastName; // string concatenation — harder  tp visualise output
+
+string name= string.Format (“{0}{1}” , firstName, lastName);  // string formating gives the same result as the one above, but is easier to read 
+
+***CREATING STRINGS***
+Var numbers = int [3]  {1,2,3}; //creating an array
+
+String  list = string.Join( “,” , numbers); //The join method is used to combine items in an array, using two arguments as the above example.
