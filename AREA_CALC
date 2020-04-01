@@ -1,0 +1,21 @@
+using System;
+
+namespace area_calc
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter X dimension:");
+            var X = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter Y dimension:");
+            var Y = Convert.ToInt32(Console.ReadLine());
+            var S1 = X * 3; 
+            var S2 = (X - 7) * (Y - 3);
+            var S3 = (S1 + S2) - 4;
+            Console.WriteLine(S3);
+
+
+        }
+    }
+}
