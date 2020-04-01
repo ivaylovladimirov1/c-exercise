@@ -1,0 +1,22 @@
+using System;
+
+namespace product_calculation
+{
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+            Console.WriteLine("Please enter name ");
+            var CxName = Console.ReadLine();
+            Console.WriteLine(CxName);
+            Console.WriteLine("Please, give price on product! ");
+            var ProductPrice = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Please enter enter quantity! ");
+            var Quantity = int.Parse(Console.ReadLine());
+            Console.WriteLine("The total is :");
+            Console.WriteLine(ProductPrice * Quantity);
+        }
+    }
+}
