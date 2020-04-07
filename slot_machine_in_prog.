@@ -1,0 +1,93 @@
+using System;
+
+namespace slot_machine
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var CreditPoints = 0;
+            Random NumbGen = new Random();
+            Console.WriteLine("Spin:Y/N?");
+            string Choice = Console.ReadLine();
+            int[] Numbers = new int[3];
+            
+
+
+
+            while (Choice != "n")
+            {
+                
+                    if (Choice == "y")
+                    {
+                        
+                        Numbers[0] = NumbGen.Next(0, 10);
+                        Numbers[1] = NumbGen.Next(0, 10);
+                        Numbers[2] = NumbGen.Next(0, 10);
+
+                        Console.WriteLine((Numbers[0], Numbers[1], Numbers[2]));
+
+
+
+                        if (Numbers[0] != Numbers[1] && Numbers[1] != Numbers[2] && Numbers[0] != Numbers[2])
+                        {
+                            Console.WriteLine("Sorry,no winnings");
+                            Console.WriteLine("Spin: Y/N?");
+                            Choice = Console.ReadLine();
+
+
+                            
+
+                                if (Numbers[0] != 9 && Numbers[1] == Numbers[2] && Numbers[1] == Numbers[0] && Numbers[2] == Numbers[0])
+                                {
+                                    CreditPoints += 20;
+                                    Console.WriteLine("Congrats!,you won 20 points");
+                                    Console.WriteLine(CreditPoints);
+                                    Console.WriteLine("Spin: Y/N?");
+                                    Choice = Console.ReadLine();
+
+                                }
+                                if(Numbers[0]==9&& Numbers[1]==Numbers[0]&& Numbers[0]==Numbers[2])
+                                {
+                                    CreditPoints += 2000;
+                                    Console.WriteLine("Congrats, you won the big Jacpot");
+                                    Console.WriteLine("Spin: Y/N?");
+                                    Choice = Console.ReadLine();
+                                }
+                                if (Numbers[0]==Numbers[1]&&Numbers[1]!=Numbers[2])
+                                {
+                                    CreditPoints += 5;
+                                    Console.WriteLine("Congrats!you won 5 points!");
+                                    Console.WriteLine(CreditPoints);
+                                    Console.WriteLine("Spin: Y/N?");
+                                    Choice = Console.ReadLine();
+
+                                }
+                                if (Numbers[0] != Numbers[1] && Numbers[0] == Numbers[2])
+                                {
+                                    CreditPoints += 5;
+                                    Console.WriteLine("Congrats!you won 5 points!");
+                                    Console.WriteLine(CreditPoints);
+                                    Console.WriteLine("Spin: Y/N?");
+                                    Choice = Console.ReadLine();
+                                }
+                        if (Numbers[0] != Numbers[1] && Numbers[1] == Numbers[2])
+                        {
+                            CreditPoints += 5;
+                            Console.WriteLine("Congrats!you won 5 points!");
+                            Console.WriteLine(CreditPoints);
+                            Console.WriteLine("Spin: Y/N?");
+                            Choice = Console.ReadLine();
+                        }
+
+                        else _ = Choice != "y";
+                            {
+                                Console.WriteLine("Wrong input");
+                         }  }
+                    }
+
+
+            }
+        }
+    }
+}
