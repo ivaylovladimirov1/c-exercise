@@ -1,0 +1,34 @@
+using System;
+
+namespace MISC
+
+{
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var season = Seasons.Autumn;
+
+            switch (season)
+            {
+                case Seasons.Autumn:
+                    
+                Console.WriteLine("it's Autumn");
+                    break;
+
+                case Seasons.Summer:
+                    Console.WriteLine("It's perfect for the beach");
+                    break;
+
+                default:
+                    Console.WriteLine("I don't know that season ");
+                    break;
+
+                        
+
+            }
+            
+        }
+    }
+}
