@@ -1,0 +1,26 @@
+using System;
+
+namespace loops_udemy
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool isGoldCustomer = true;
+            float Price;
+
+           // if (isGoldCustomer)
+            //{
+             //   Price = 19.95f;
+              //  Console.WriteLine(Price);
+            //}
+           // else
+            //{
+             //   Price = 29.95f;
+              //  Console.WriteLine(Price);
+           // }
+            float price = (isGoldCustomer) ? 19.95f : 29.95f;
+            Console.WriteLine(price);
+        }
+    }
+}
