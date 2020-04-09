@@ -1,0 +1,60 @@
+using System;
+
+namespace slot_machine
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var CreditPoints = 0;
+            Random NumbGen = new Random();
+            Console.WriteLine("Spin:Y/N?");
+            string Choice = Console.ReadLine();
+            int[] Numbers = new int[3];
+
+
+
+
+            while (Choice != "n")
+             {
+                Numbers[0] = NumbGen.Next(0, 10);
+                Numbers[1] = NumbGen.Next(0, 10);
+                Numbers[2] = NumbGen.Next(0, 10);
+
+                Console.WriteLine((Numbers[0], Numbers[1], Numbers[2]));
+
+                if(Numbers[0]==Numbers[1]&& Numbers[1]!=Numbers[2]||Numbers[0]==Numbers[2]&&Numbers[0]!=Numbers[1]||Numbers[1]==Numbers[2]&&Numbers[2]!=Numbers[0])
+
+                {
+                    CreditPoints += 20;
+                    Console.WriteLine("Congrats,you have won 20points");
+                   // Console.WriteLine("Spin again: Y/N?");
+                    //Choice = Console.ReadLine();
+                }
+                if(Numbers[0]!=Numbers[1]&&Numbers[2]!=Numbers[1]&&Numbers[0]!=Numbers[2])
+
+                {
+                    Console.WriteLine("no win");
+                }
+                else if (Numbers[0]==9 && Numbers[1]==9||Numbers[0]==9 && Numbers[2]==9||Numbers[1]==9&&Numbers[2]==9)
+                {
+                    Console.WriteLine("Congrats,you win 200 points");
+                    CreditPoints += 200;
+                }
+                else if(Numbers[0]==9&&Numbers[1]==9&&Numbers[2]==9)
+                {
+                    CreditPoints += 2000;
+                    Console.WriteLine("Whoopie, you won the big JACKPOT!");
+                }
+
+                
+                Console.WriteLine("You currently have "+CreditPoints+".");
+                Console.WriteLine("Spin again: Y/N?");
+                Choice = Console.ReadLine();
+
+            }
+
+
+            }
+        }
+    }
