@@ -1,0 +1,31 @@
+using System;
+
+namespace MISC
+
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+            Random Numbgen = new Random();
+            Console.WriteLine("Roll dice: Y/N ?");
+            string Roll=Console.ReadLine();
+            int Dice=0;
+
+            while (Roll != "N" || Roll != "n")
+            {
+                Dice = Numbgen.Next(1, 7);
+                Console.WriteLine("You rolled" + Dice + ".");
+
+                Console.WriteLine("Roll again?");
+                Roll = Console.ReadLine();
+            }
+
+                
+
+
+        }
+    }
+}
