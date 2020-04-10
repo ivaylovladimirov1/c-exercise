@@ -1,0 +1,22 @@
+Console.WriteLine("Please, enter a valid number!");
+            int Input = int.Parse(Console.ReadLine());
+            int Guess=Input;
+            int GuessCount = 0;
+
+            while (GuessCount <= 5)
+                
+            {
+                if (Guess <= 10)
+                {
+                    Console.WriteLine(+Guess + "Is a correct value");
+                    break;
+
+                }
+                 else if(Guess>10)
+                {
+                    Console.WriteLine("Wrong input,try again");
+
+                }
+
+                Input = int.Parse(Console.ReadLine());
+                GuessCount++;
