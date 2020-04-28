@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace moving_part
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int redo = 0;
+            int sides = 20;
+            int vertical = 10;
+
+            ConsoleKeyInfo keyInfo;
+            do
+            {
+                keyInfo = Console.ReadKey(true);
+                Console.Clear();
+
+                switch(keyInfo.Key)
+                {
+                    case ConsoleKey.RightArrow:
+                        sides++;
+                        Console.SetCursorPosition(sides, 10);
+                        Console.Write("X");
+                        break;           
+                    case ConsoleKey.LeftArrow:
+                        Console.SetCursorPosition(sides, 10);
+                        Console.Write("X");
+                        sides--;
+                        break;
+                    case ConsoleKey.UpArrow:
+                        vertical--;
+                        Console.SetCursorPosition(sides,vertical);
+                        Console.Write("X");
+                        break;
+                    case ConsoleKey.DownArrow:
+                        vertical++;
+                        Console.SetCursorPosition(sides, vertical);
+                        Console.Write("X");
+                        break;
+
+
+
+                }
+
+            } while (redo == 0);    
+
+            Console.ReadLine();
+        }
+    }
+}
