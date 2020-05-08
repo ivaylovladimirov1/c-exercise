@@ -1,0 +1,77 @@
+using System;
+
+namespace goals
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int totalpointsP1 = 0;
+            int CurrentPointsP1 = 0;
+            int TotalPointsP2 = 0;
+            int CurrentPointsP2 = 0;
+            int Gamelenght = 10;
+
+            for (int i = 0; i < Gamelenght; i++)
+            {
+                try
+                {
+                    Console.WriteLine("Please enter goals for player one ");
+                    CurrentPointsP1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Please enter goals for player two ");
+                    CurrentPointsP2 = int.Parse(Console.ReadLine());
+                    TotalPointsP2 += CurrentPointsP2;
+                    totalpointsP1 += CurrentPointsP1;
+                    if (CurrentPointsP1 > CurrentPointsP2)
+                    {
+                        Console.WriteLine("Player oner wins!");
+
+
+                    }
+                    else if (CurrentPointsP2 > CurrentPointsP1)
+                    {
+                        Console.WriteLine("Player two wins!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("It's a draw!");
+
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Wrong input,please try again!");
+                    Gamelenght++;
+                    continue;
+                }
+                    
+            }
+
+            if (totalpointsP1 > TotalPointsP2)
+            {
+                Console.WriteLine("Player one wins with " + totalpointsP1 + "points.");
+            }
+            else if (totalpointsP1 < TotalPointsP2)
+            {
+                Console.WriteLine("Player two wins with " + TotalPointsP2 + "points.");
+            }
+            else
+            {
+
+                Console.WriteLine("It's a draw!");
+            }
+
+
+
+
+
+
+
+
+
+
+
+        }  
+    }
+}
